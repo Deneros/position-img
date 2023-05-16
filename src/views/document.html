@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Firma de documento</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    
+    <style>
+      body {
+        background-color: aqua;
+        display: flex;
+      }
+      #sidebar {
+        width: 200px;
+        height: 100vh;
+        border-right: 1px solid black;
+        padding: 20px;
+      }
+      #pdf-container {
+        position: relative;
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #signature {
+        display: none;
+        width: 150px;
+        height: 20px;
+        border: 1px solid black;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="sidebar">
+      <button id="add-signature-button">Agregar firma</button>
+      <button id="add-img-button" style="display: none;">Insertar Imagen</button>
+      <!-- <input id="add-image" type="file"> -->
+    </div>
+    <div id="pdf-container">
+      <div id="signature">
+        <p>Arrastre la firma</p>
+      </div>
+    </div>
+    <button id="save-position-button" style="display: none;">Guardar posicion</button>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
